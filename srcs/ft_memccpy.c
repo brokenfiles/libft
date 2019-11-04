@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 22:44:55 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 13:53:53 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/04 18:30:18 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	src_copy = (unsigned char *)src;
 	dst_copy = (unsigned char *)dst;
 	index = 0;
-	while (index < n && src_copy[index] != (unsigned char)c)
+	while (index < n)
 	{
 		dst_copy[index] = src_copy[index];
+		if (dst_copy[index] == (unsigned char)c)
+			return (dst_copy + index + 1);
 		index++;
 	}
-	return (dst);
+	return (NULL);
 }

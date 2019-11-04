@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:58:25 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 13:01:48 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/04 18:32:31 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (!(memory = (void *)malloc(count * size)))
 		return (NULL);
+	ft_bzero(memory, count * size);
 	return (memory);
 }
