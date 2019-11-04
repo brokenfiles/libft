@@ -6,13 +6,13 @@
 /*   By: louis <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 11:13:18 by louis             #+#    #+#             */
-/*   Updated: 2019/10/18 11:15:23 by louis            ###   ########.fr       */
+/*   Updated: 2019/11/03 15:52:07 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strjoin(char const *s, unsigned int start, unsigned int len)
+char	*ft_strsub(char const *s, unsigned int start, unsigned int len)
 {
 	char	*sub;
 	int	index;
