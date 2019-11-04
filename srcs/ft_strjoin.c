@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:01:32 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 14:01:35 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/04 20:14:34 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*final_string;
-	int		index;
-	int		index2;
+	unsigned int	index;
+	unsigned int	index2;
 
 	index2 = 0;
 	index = ft_strlen(s1);
@@ -24,10 +24,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		(ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
 	final_string = ft_strcpy(final_string, s1);
-	while (index < ft_strlen(s2))
+	while (index < (ft_strlen(s1) + ft_strlen(s2)))
 	{
-		final_string[index] = s2[index2];
-		index2++;
+		final_string[index] = s2[index - ft_strlen(s1)];
 		index++;
 	}
 	final_string[index] = '\0';

@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:01:40 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/10 17:38:16 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/11/04 18:40:10 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,22 +76,12 @@ int		main(int argc, const char *argv[])
 	}
 	else if (arg == 6)
 	{
-		int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
 
-		printf("%s", ft_memchr(tab, -1, 7));
 	}
 	else if (arg == 7)
 	{
-		char *pouet = "z";
-		char *lolzer = (char *)&pouet[2];
-		lolzer = "aaaaaaaaaa";
-		str = ft_memchr(pouet, 'a', 50);
-		if (!str)
-			ft_print_result("NULL");
-		else
-		{
-			ft_print_result(str);
-		}
+
+
 	}
        	return (0);
 }

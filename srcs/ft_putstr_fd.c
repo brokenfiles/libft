@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:57:41 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 16:57:41 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/04 19:23:23 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char const *s, int fd)
 	index = 0;
 	while (s[index])
 	{
-		write(fd, &s[index], fd);
+		write(fd, &s[index], 1);
 		index++;
 	}
 }
