@@ -1,7 +1,7 @@
 # ⌛ libft project
 
 - 🏫 Cursus : 42cursus
-- 📌 School : 42 Paris
+- 📌 Campus : 42 Paris
 - 👨 Login  : llaurent
 
 ⏰ Current project state :
