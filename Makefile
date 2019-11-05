@@ -6,7 +6,7 @@
 #    By: llaurent <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:15:39 by llaurent          #+#    #+#              #
-#    Updated: 2019/11/05 15:46:19 by llaurent         ###   ########.fr        #
+#    Updated: 2019/11/05 21:38:02 by louis            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS = ${PATH_SRCS}/ft_atoi.c ${PATH_SRCS}/ft_bzero.c ${PATH_SRCS}/ft_isalnum.c 
  ${PATH_SRCS}/ft_itoa.c ${PATH_SRCS}/ft_memccpy.c ${PATH_SRCS}/ft_memchr.c ${PATH_SRCS}/ft_memcmp.c\
  ${PATH_SRCS}/ft_memcpy.c ${PATH_SRCS}/ft_memset.c ${PATH_SRCS}/ft_putchar.c ${PATH_SRCS}/ft_putchar_fd.c\
  ${PATH_SRCS}/ft_putendl.c ${PATH_SRCS}/ft_putnbr.c ${PATH_SRCS}/ft_putnbr_fd.c ${PATH_SRCS}/ft_putstr.c\
- ${PATH_SRCS}/ft_putstr_fd.c ${PATH_SRCS}/ft_strchr.c\
+ ${PATH_SRCS}/ft_putstr_fd.c ${PATH_SRCS}/ft_strchr.c ${PATH_SRCS}/ft_strjoin.c ${PATH_SRCS}/ft_putendl_fd.c\
  ${PATH_SRCS}/ft_strcpy.c ${PATH_SRCS}/ft_strdel.c ${PATH_SRCS}/ft_strdup.c ${PATH_SRCS}/ft_strlcpy.c\
  ${PATH_SRCS}/ft_striter.c ${PATH_SRCS}/ft_striteri.c ${PATH_SRCS}/ft_strlcat.c\
  ${PATH_SRCS}/ft_strlen.c ${PATH_SRCS}/ft_strmap.c ${PATH_SRCS}/ft_strmapi.c ${PATH_SRCS}/ft_strncat.c\

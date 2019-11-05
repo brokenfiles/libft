@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:57:14 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 17:18:53 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/05 21:55:28 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,63 +26,29 @@ int		contains_char(char const c, char const *set)
 	return (0);
 }
 
-int		count_trimmed(char const *s, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-	int	index;
-	int	trimmed;
-
-	index = 0;
-	trimmed = 0;
-	while (s[index] && contains_char(s[index], set))
-	{
-		trimmed++;
-		index++;
-	}
-	index = ft_strlen(s);
-	while (s[index] && contains_char(s[index], set))
-	{
-		trimmed++;
-		index--;
-	}
-	return (trimmed);
-}
-
-int		get_end(char const *s, char const *set)
-{
-	int	end;
-
-	end = ft_strlen(s) - 1;
-	while (end > 0 && contains_char(s[end], set))
-		end--;
-	return (end + 1);
-}
-
-char	*ft_trim(char *trimmed, char const *s, char const *set)
-{
-	int index;
-	int index2;
-
-	index = 0;
-	index2 = 0;
-	while (s[index] && contains_char(s[index], set))
-		index++;
-	while (s[index] && index < get_end(s, set))
-		trimmed[index2++] = s[index++];
-	trimmed[index2] = '\0';
-	return (trimmed);
-}
-
-char	*ft_strtrim(char const *s, char const *set)
-{
+	size_t	start;
+	size_t	end;
 	char	*trimmed;
-	int		index;
-	int		index2;
 
-	index = 0;
-	index2 = 0;
-	if (!(trimmed = (char *)malloc(sizeof(char) *
-			(ft_strlen(s) - count_trimmed(s, set) + 1))))
+	if (!s1)
 		return (NULL);
-	trimmed = ft_trim(trimmed, s, set);
+	if (!set)
+		return (ft_strdup(s1));
+	start = 0;
+	end = ft_strlen(s1);
+	while (contains_char(s1[start], set))
+		start++;
+	if (start == ft_strlen(s1))
+	{
+		if (!(trimmed = ft_strdup("")))
+			return (NULL);
+		return (trimmed);
+	}
+	while (contains_char(s1[end - 1], set))
+		end--;
+	trimmed = ft_substr(s1, start, end - start);
 	return (trimmed);
 }
+
