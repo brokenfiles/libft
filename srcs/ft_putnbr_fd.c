@@ -6,16 +6,11 @@
 /*   By: llaurent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 11:57:11 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/05 13:46:11 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

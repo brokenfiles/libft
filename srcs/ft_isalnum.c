@@ -6,15 +6,15 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:11:18 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:08:18 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if (((char)c >= 'a' && (char)c <= 'z') ||
-	(((char)c >= 'A' && (char)c <= 'Z')) ||
-	(((char)c >= '0' && (char)c <= '9')))
+	if ((c >= 97 && c <= 122) ||
+	(c >= 65 && c <= 90) ||
+	(c >= 48 && c <= 57))
 		return (1);
 	return (0);
 }

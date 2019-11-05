@@ -6,13 +6,13 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 16:10:32 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:06:15 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if ((char)c >= 'a' && (char)c <= 'z')
-		c -= 32;
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	return (c);
 }

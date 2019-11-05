@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:56:51 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/05 16:55:56 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -24,14 +26,12 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_atoi(const char *str);
-char	*ft_strstr(char *haystack, char *needle);
-char	*ft_strnstr(char *haystack, char *needle, unsigned int n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 size_t	ft_strlen(const char *str);
 int		ft_strcmp(const char *str1, const char *str2);
 int		ft_strncmp(const char *str1, const char *str2, size_t nb);
-char	*ft_strrchr(char *str, int c);
-char	*ft_strchr(char *str, int c);
-char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strrchr(char const *str, int c);
+char	*ft_strchr(char const *str, int c);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strncat(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
@@ -43,7 +43,6 @@ void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
-void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));

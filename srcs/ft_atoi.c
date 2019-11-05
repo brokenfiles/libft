@@ -6,11 +6,13 @@
 /*   By: llaurent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:11:00 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
+/*   Updated: 2019/11/05 17:13:03 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+#include "libft.h"
+
+int	ft_atoi(const char *str)
 {
 	int	result;
 	int	sign;
@@ -27,7 +29,7 @@ int	ft_atoi(char *str)
 			sign = -sign;
 		index++;
 	}
-	while (str[index] >= '0' && str[index] <= '9')
+	while (ft_isdigit(str[index]))
 	{
 		result = result * 10 + str[index] - '0';
 		index++;
