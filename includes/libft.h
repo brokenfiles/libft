@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 16:56:51 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/05 22:06:24 by louis            ###   ########.fr       */
+/*   Updated: 2019/11/05 22:10:22 by louis            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-int		ft_lstsize(t_list lst);
+int		ft_lstsize(t_list *lst);
 int		ft_atoi(const char *str);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 size_t	ft_strlen(const char *str);
