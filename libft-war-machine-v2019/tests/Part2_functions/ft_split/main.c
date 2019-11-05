@@ -6,12 +6,13 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:34:58 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/11 15:23:30 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/11/05 10:13:20 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 #include "../../../libft.h"
 
 void	ft_print_result(char const *s)

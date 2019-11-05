@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 16:56:45 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 20:05:07 by louis            ###   ########.fr       */
+/*   Created: 2019/11/05 13:12:42 by llaurent          #+#    #+#             */
+/*   Updated: 2019/11/05 13:12:42 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[index] = '\0';
 	return (sub);
 }
-

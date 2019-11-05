@@ -6,111 +6,52 @@
 /*   By: llaurent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 22:09:45 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 22:40:40 by louis            ###   ########.fr       */
+/*   Updated: 2019/11/05 11:24:19 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h> 
+#include "libft.h"
 
-int	count_words(char const *s, char c)
+size_t	count_words(char *s, char c)
 {
-	int	words;
-	int	index;
-	int	set;
+	size_t	words;
+	int		index;
 
 	index = 0;
-	words = 0;
-	set = 1;
+	while (s[index] && s[index] == c)
+		index++;
+	words = (s[index] ? 1 : 0);
 	while (s[index])
 	{
-		if (set == 1 && s[index] != c)
-		{
-			set = 0;
+		if (s[index] == c && s[index + 1] && s[index + 1] != c)
 			words++;
-		}
-		if (s[index] == c)
-			set = 1;
 		index++;
 	}
 	return (words);
 }
 
-char	*get_word(char *part, char const *s, char c, int index)
-{
-	int	word_len;
-	int	index_cp;
-
-	index_cp = index;
-	word_len = 0;
-	while (s[index_cp] && s[index_cp] != c)
-	{
-		index_cp++;
-		word_len++;
-	}
-	index_cp = 0;
-	if (!(part = (char *)malloc(sizeof(char) * (word_len + 1))))
-		return (NULL);
-	while (s[index] && s[index] != c)
-	{
-		part[index_cp] = s[index];
-		index_cp++;
-		index++;
-	}
-	return (part);
-}
-
-char	**fill_words(char **splitted, char const *s, char c)
-{
-	int	words;
-	int	index;
-	int	set;
-
-	index = 0;
-	words = 0;
-	set = 1;
-	while (s[index])
-	{
-		if (set == 1 && s[index] != c)
-		{
-			set = 0;
-			splitted[words] = get_word(splitted[words], s, c, index);
-			words++;
-		}
-		if (s[index] == c)
-			set = 1;
-		index++;
-	}
-	splitted[words] = 0;
-	return (splitted);
-
-}
-
 char	**ft_split(char const *s, char c)
 {
-	char	**splitted;
-	int	words;
-	int	index;
+	size_t		words;
+	char		*begin;
+	char		**result;
 
-	index = 0;
-	words = count_words(s, c);
-	if (!(splitted = (char **)malloc(sizeof(char *) * (words + 1))))
+	words = count_words((char *)s, c);
+	if (!(result = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
-	fill_words(splitted, s, c);
-	return (splitted);
-}
-
-int	main(int ac, char **av)
-{
-	int	index;
-	char	**splitted;
-
-	splitted = ft_split(av[1], av[2][0]);
-	index = 0;
-	while (splitted[index])
+	begin = (char *)s;
+	while (*s)
 	{
-		printf("%s\n", splitted[index]);
-		index++;
+		if (*s == c)
+		{
+			if (begin != s)
+				*(result++) = ft_substr(begin, 0, s - begin);
+			begin = (char *)s + 1;
+		}
+		++s;
 	}
-	return (0);
+	if (begin != s)
+		*(result++) = ft_substr(begin, 0, s - begin);
+	*result = NULL;
+	return (result - words);
 }

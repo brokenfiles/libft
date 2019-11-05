@@ -6,13 +6,13 @@
 /*   By: llaurent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 16:58:42 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 21:25:55 by louis            ###   ########.fr       */
+/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	get_nbr_length(unsigned int nb)
+int		get_nbr_length(unsigned int nb)
 {
 	unsigned int	index;
 

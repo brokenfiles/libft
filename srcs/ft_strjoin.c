@@ -6,7 +6,7 @@
 /*   By: llaurent <llaurent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:01:32 by llaurent          #+#    #+#             */
-/*   Updated: 2019/11/04 20:14:34 by louis            ###   ########.fr       */
+/*   Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*final_string;
+	char			*final_string;
 	unsigned int	index;
 	unsigned int	index2;
 

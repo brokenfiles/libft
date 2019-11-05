@@ -6,7 +6,7 @@
 #    By: llaurent <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:15:39 by llaurent          #+#    #+#              #
-#    Updated: 2019/11/04 19:29:40 by louis            ###   ########.fr        #
+#    Updated: 2019/11/05 09:46:37 by llaurent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS = ${PATH_SRCS}/ft_atoi.c ${PATH_SRCS}/ft_bzero.c ${PATH_SRCS}/ft_isalnum.c 
  ${PATH_SRCS}/ft_striter.c ${PATH_SRCS}/ft_striteri.c ${PATH_SRCS}/ft_strlcat.c\
  ${PATH_SRCS}/ft_strlen.c ${PATH_SRCS}/ft_strmap.c ${PATH_SRCS}/ft_strmapi.c ${PATH_SRCS}/ft_strncat.c\
  ${PATH_SRCS}/ft_strncmp.c ${PATH_SRCS}/ft_strnew.c ${PATH_SRCS}/ft_memmove.c\
- ${PATH_SRCS}/ft_strnstr.c ${PATH_SRCS}/ft_strsplit.c ${PATH_SRCS}/ft_strrchr.c ${PATH_SRCS}/ft_strstr.c\
+ ${PATH_SRCS}/ft_strnstr.c ${PATH_SRCS}/ft_split.c ${PATH_SRCS}/ft_strrchr.c ${PATH_SRCS}/ft_strstr.c\
  ${PATH_SRCS}/ft_strnstr.c ${PATH_SRCS}/ft_substr.c ${PATH_SRCS}/ft_strtrim.c ${PATH_SRCS}/ft_tolower.c\
  ${PATH_SRCS}/ft_toupper.c ${PATH_SRCS}/ft_calloc.c
 OBJS = ${SRCS:.c=.o}
@@ -38,7 +38,7 @@ all: ${NAME}
 .c.o: ${OBJS}
 	${COMPILER_COMMAND} ${OPTIONS} ${FLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}: ${OBJS}
+$(NAME): ${OBJS}
 	${LIB_CREATOR_COMMAND} rc ${NAME} ${OBJS}
 
 clean:
