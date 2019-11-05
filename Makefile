@@ -6,7 +6,7 @@
 #    By: llaurent <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/04 11:15:39 by llaurent          #+#    #+#              #
-#    Updated: 2019/11/05 21:38:02 by louis            ###   ########.fr        #
+#    Updated: 2019/11/05 22:06:38 by louis            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRCS = ${PATH_SRCS}/ft_atoi.c ${PATH_SRCS}/ft_bzero.c ${PATH_SRCS}/ft_isalnum.c 
  ${PATH_SRCS}/ft_strncmp.c ${PATH_SRCS}/ft_strnew.c ${PATH_SRCS}/ft_memmove.c\
  ${PATH_SRCS}/ft_strnstr.c ${PATH_SRCS}/ft_split.c ${PATH_SRCS}/ft_strrchr.c\
  ${PATH_SRCS}/ft_strnstr.c ${PATH_SRCS}/ft_substr.c ${PATH_SRCS}/ft_strtrim.c ${PATH_SRCS}/ft_tolower.c\
- ${PATH_SRCS}/ft_toupper.c ${PATH_SRCS}/ft_calloc.c
+ ${PATH_SRCS}/ft_toupper.c ${PATH_SRCS}/ft_calloc.c ${PATH_SRCS}/ft_lstsize.c
 OBJS = ${SRCS:.c=.o}
 
 all: ${NAME}
