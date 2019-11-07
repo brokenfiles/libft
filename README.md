@@ -6,4 +6,4 @@
 
 ⏰ Current project state :
  - State        : Success ✅
- - Result       : 115%.   ✅
+ - Result       : 115%    ✅
